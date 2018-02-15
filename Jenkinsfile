@@ -6,5 +6,10 @@ pipeline {
         build 'PowershellzCopy'
       }
     }
+    stage('Stage 2') {
+      steps {
+        echo 'This is the END!'
+      }
+    }
   }
 }

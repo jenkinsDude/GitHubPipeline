@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('Stage 1') {
-      steps {
-        build 'PowershellzCopy'
+      parallel {
+        stage('Stage 1') {
+          steps {
+            build 'PowershellzCopy'
+          }
+        }
+        stage('Stage 1.5') {
+          steps {
+            echo 'DO IT!'
+          }
+        }
       }
     }
     stage('Stage 2') {

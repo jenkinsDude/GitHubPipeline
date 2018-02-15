@@ -5,12 +5,12 @@ pipeline {
       parallel {
         stage('Stage 1') {
           steps {
-            build 'PowershellzCopy'
+            echo 'start stage 1'
           }
         }
         stage('Stage 1.5') {
           steps {
-            echo 'DO IT!'
+            build 'PowershellzCopy'
           }
         }
       }
